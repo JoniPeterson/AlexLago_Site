@@ -1,0 +1,180 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*Portfolio.html--*/
+
+
+
+
+
+/*Portfolio-------------------------------------------------*/
+
+
+
+
+div#portfolio {
+/* Prevent vertical gaps */
+ 	line-height: 0;
+   	max-width: 55em;
+  	margin: 40px auto 0 auto;
+  	-webkit-column-count: 3;
+  	-webkit-column-gap: .925em;
+  	-webkit-column-width: auto;
+  	-moz-column-count: 3;
+  	-moz-column-gap: .925em;
+ 	-moz-column-width: auto;
+  	column-count: 3;
+  	column-gap: .925em;
+	column-width: auto;
+	padding: 10px;
+   
+}
+
+div#portfolio img.top  {
+/* Just in case there are inline attributes */
+  	width: 100% !important;
+  	height: auto !important;
+ 	margin-bottom: .925em;
+  	max-width: 18em;
+
+}
+
+div#portfolio img:hover,
+div#portfolio img:focus,
+div#portfolio img:active {
+	opacity: .75;
+	}
+
+
+/* Signature svg */
+
+div#main_signature_portfolio_profile_bottom{
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+}
+
+img#signature_portfolio_profile_bottom{
+	width: 50em;
+	opacity: .5;
+	margin: 0 auto;
+	padding-bottom: 40px;
+}
+
+
+
+/* Lightbox markup
+_________________________________________________*/
+
+div#portfolio a.lightbox {
+	/** Default lightbox to hidden */
+	display: none;
+
+	/** Position and style */
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+   	transition:all.3s ease;
+
+}
+
+/* Lightbox */
+div#portfolio a.lightbox img {
+	/** Pad the lightbox image */
+	max-width: 90%;
+	max-height: 80%;
+	margin: 5% auto;
+}
+
+div#portfolio a.lightbox:target {
+	/** Remove default browser outline */
+	outline: none;
+	
+	/** Unhide lightbox **/
+	display: block;
+   	transition: all ease-in-out .5s;
+}
+
+/* Blur effect on lightbox - lazyload specifications */
+div#portfolio img.blur-up {
+	-webkit-filter: blur(5px);
+	filter: blur(5px);
+	transition: filter 500ms, -webkit-filter 500ms;
+}
+
+div#portfolio img.blur-up.lazyloaded {
+	-webkit-filter: blur(0);
+	filter: blur(0);
+}
+
+
+/* Media Queries 
+______________________________________________*/
+
+@media (max-width: 1200px) {
+  	div#portfolio {
+	  	-moz-column-count:    3;
+  		-webkit-column-count: 3;
+  		column-count:         3;
+  	}
+}
+
+
+@media (max-width: 1000px) {
+  	div#portfolio {
+	  	-moz-column-count:    3;
+  		-webkit-column-count: 3;
+	  	column-count:         3;
+ 	 }
+}
+
+
+@media (max-width: 800px) {
+	div#portfolio {
+	  	text-align: center;
+		-moz-column-count:    3;
+  		-webkit-column-count: 3;
+	  	column-count:         3;
+ 	 }
+	 
+	/* Signature svg adjustment */
+
+	div#main_signature_portfolio_profile{
+		width: 500px;
+		margin: 0 auto;
+		top: 15px;
+	}
+}
+	
+
+@media (max-width: 600px) {
+  	div#portfolio {
+  		-moz-column-count:    2;
+  		-webkit-column-count: 2;
+		column-count:         2;
+  	}
+}
+	
+
+@media (max-width: 400px) {
+	
+ 	div#portfolio {
+		-moz-column-count:   1;
+		-webkit-column-count: 1;
+  		column-count:        1;
+  	}
+	div#portfolio > a {
+		cursor: default;
+	}
+	
+	div#portfolio a.lightbox:target {
+		display: none;	
+  	}	
+}
+
+

@@ -1,0 +1,1267 @@
+/*AlexLago.com / styles.css*/
+
+/* Table of Contents
+––––––––––––––––––––––––––––––––––––––––––––––
+- General Content
+- Top-wrapper & Header Section - Index
+- Main Content Section
+- Footer Section
+- Shared Files - all pages
+- Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––– */
+
+/*Reset--------------------------------------------------*/
+
+* { margin: 0; padding: 0; }
+html { overflow-y: scroll;}
+
+article, aside, details, figcaption, figure,
+
+footer, header, hgroup, menu, nav, section { 
+    display: block;
+	}
+
+
+/*General----------------------------------------------------------------*/
+
+body {
+    font-family: "Josefin Sans", "Myriad Pro", sans;
+	font-size: 1em;
+	color: #5D5C5C;
+	background:#ffffff;
+}
+
+ol, ul { list-style: none; margin: 0;}
+
+ul li { margin: 0; padding: 0;}
+
+p { margin: 0; line-height: 1.2em; font-size: 1em; }
+
+h1, h2, h5 { margin:0; color: #5D5C5C; }
+
+h2 { text-transform: uppercase; }
+
+a, img { outline: none; border:none; color: #5D5C5C; font-weight: bold; text-decoration: none;}
+
+a {cursor: pointer;}
+
+	
+/*Top-Wrapper and Header Section
+__________________________________________________________________________*/	
+
+div.top_wrapper {
+	width: 100%;
+	height: 1080px;
+	margin: 0 auto;
+	position: relative;
+	max-width: 2000px;
+	overflow: hidden;
+}
+
+#hero_bg {
+  	background: url(../images/bg-alex_hero-min-opt.jpg) no-repeat 45% 45% fixed;
+	background-size: cover;
+ }
+
+#header_main {
+	margin: 0 auto;
+	width: 100%;
+	height: 195px;
+	position: relative;
+	z-index: 777;
+}
+
+/* Logo */
+	
+#logo_wrapper {
+	width: 8em;
+	height: 8em;
+	display: inline-block;
+	position: absolute;
+	left: 35px;
+	top: 20px;
+	z-index: 888;
+}
+		
+#logo {
+	transition: all 0.5s ease-in-out 0s;
+}
+
+#logo:hover, 
+#logo:focus, 
+#logo:active {
+	transform: scale(1.1);
+}	
+
+
+/* Menu */
+	
+nav ul.main-menu {
+	margin: 0 auto;
+	width: 27em;
+	position: relative;
+	text-align: center;
+	top: 3em;
+	left: 0;
+	list-style-type: none;
+	padding: 0 0 0 1.5em;
+}
+	
+
+/* Strip the ul of padding and list styling */
+nav .main-menu ul {
+	list-style-type:none;
+	margin: 0;			
+	padding: 0;
+	position: absolute;
+}
+
+/* Create a horizontal list with spacing */
+nav .main-menu li {
+	display:inline-block;
+	margin-right: 1em;
+}
+
+/* Style for menu links */
+nav .main-menu li a {
+	display:block;
+	min-width: 5em;
+	text-align: center;
+	line-height: 1em;
+	font-size: 1.1em;
+	color: #fff;
+	background: #000;
+    opacity: 0.5;
+	text-decoration: none;
+    padding: .5em .95em;
+	box-shadow: 1px 2px 2px rgba(105, 105, 113, 0.83);
+	transition: all linear 0.35s; 
+}
+
+.arrow {
+	font-size: .6em;
+	line-height: 0;
+	padding: 4px 0 0 3px;
+}
+
+/* Hover state for top level links */
+nav .main-menu li:hover a, 
+nav .main-menu li:focus a, 
+nav .main-menu li:active a  {
+	background: #FFF;
+    opacity: 0.5;
+    color: #000;
+}
+
+nav .main-menu li a.default-pointer {
+	cursor: default;
+	text-decoration: none;
+	}
+
+/* Style for dropdown links */
+nav .main-menu li:hover ul a, 
+nav .main-menu li:focus ul a, 
+nav .main-menu li:active ul a{
+	background: #FFF;
+	text-align: center;
+    opacity: 0.5;
+	color: #000;
+	line-height: 1em;
+	font-size: 1.1em;
+    padding: .5em .95em;
+	margin-top: 1px;
+}
+
+/* Hover state for dropdown links */
+nav .main-menu li:hover ul a:hover, 
+nav .main-menu li:hover ul a:focus, 
+nav .main-menu li:hover ul a:active {
+	background: #FFF;
+    opacity: 0.5;
+	color: #000;
+    text-decoration: underline;
+	transition: all linear 0.35s;
+}
+
+/*Hide dropdown links until they are needed*/
+nav .sub_menu {
+	display: none;
+}
+
+/* Make dropdown links vertical */
+nav .main-menu li ul li {
+	display: block;
+	float: none;
+}
+
+/* Display the dropdown on hover */
+nav .main-menu li a:hover + .sub_menu, .sub_menu:hover,
+nav .main-menu li a:focus + .sub_menu, .sub_menu:focus,
+nav .main-menu li a:active + .sub_menu, .sub_menu:active {
+	display: block;
+}
+
+/* Social media buttons */
+div#social_media {
+	position: absolute;
+	text-align: center;
+	right: 38px;
+	top: 40px;
+	}
+
+div#social_media  {
+	vertical-align: middle;	
+}
+	
+div#social_media a {
+	color: #fff;
+	text-align: center;
+	display: block;
+	width: 36px;
+	height: 36px;
+	margin: 3px;
+	background-color:#44020a;
+	border-radius: 50%;
+}
+
+/* Mobile navigation and hero images hidden */
+
+nav#nav-mobile, #mobile-nav-wrapper, div#hero-wrap, 
+#hero-image-550w, #hero-image-415w, #hero-image-375w,
+div#mobile-divider, #mobile_signature_wrap,
+#main_signature_portfolio_profile_top { display:none; }
+	
+/* Signature */
+
+div#main_signature {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+img#signature {
+	display: block;
+	position: relative;
+	width: 35em;
+	height: auto;
+	top: 250px;
+	left: 50%;
+}	
+
+/*Main content - Quote section
+_________________________________________________________________*/
+
+div#lower_wrapper {
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+	overflow: hidden;
+}
+	
+/* Quote */
+
+div#lower_wrapper blockquote#quote {
+	padding: 60px 0;
+}
+	
+div#lower_wrapper blockquote#quote h1 {
+	font-family: "Minion Pro", serif;
+	font-style: italic;
+	font-size: 3.3em;
+	padding: 0;
+	text-shadow: 1px 2px 2px rgba(105, 105, 113, 0.83); 
+}
+	
+div#lower_wrapper blockquote#quote #quote_author p {
+	text-align: center;
+	font-family: "Josefin Sans", sans-serif;
+	font-style: normal;
+	padding-top: 23px;
+	text-shadow: 1px 2px 2px rgba(105, 105, 113, 0.83);
+}
+
+div#lower_wrapper blockquote#quote h1::before {
+	content: "\201c";
+	color: #44020A;
+	position: relative;
+	left: -18px;
+	top: 10px;
+	font-size: 1.6em;
+	font-family: serif;
+	text-shadow: 1px 2px 2px rgba(105, 105, 113, 0.83);
+}
+
+div#lower_wrapper blockquote#quote h1::after {
+	content: "\201d";
+	font-family: serif;
+	position: relative;
+	left: 10px;
+	top: -10px;
+	font-size: .8em;
+	color: #44020A;
+	text-shadow: 1px 2px 2px rgba(105, 105, 113, 0.83);
+}
+
+div#lower_wrapper blockquote#quote #quote_author p::before {	
+	content: "\2014";
+	position: relative;
+	font-size: 1em;
+	top: -2px;		
+}
+
+/*Photo navigation section
+_________________________________________________________________________*/
+
+#nav_photonav_wrapper {
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;	
+}
+
+#nav_photonav_wrapper nav#nav_photonav {
+	margin: 90px 0 90px 0;
+}
+	
+	
+#nav_photonav_wrapper nav#nav_photonav ul li {
+	display: inline;
+}
+
+ #nav_photonav_wrapper nav#nav_photonav ul li a div.photonav_photo {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-clip: border-box;
+	display: inline-block;
+	overflow: hidden;
+    width: 325px;
+    height: 325px;
+	margin: 2px;
+    text-decoration: none;  
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+ div#photonav_portfolio.photonav_photo {
+	width: 100%;
+	background-image: url(../images/bg-alex-lago-model-purple-jacket-in-field-2_5-square-350w.jpg);
+}
+
+ div#photonav_bio.photonav_photo {
+	width: 100%;
+	background-image: url(../images/bg-alex-lago-model-black-leather-jacket-1_3-square-350w.jpg);
+}
+
+ div#photonav_experience.photonav_photo {
+	width: 100%;
+	background-image: url(../images/bg-alex-lago-model-jumping-over-tires-2_3-square-350w.jpg);
+}
+	
+div.photonav_description {
+	background-color: black;
+	opacity: 0.60;
+	margin: 90%  2% 0 2%;
+	text-align: left;
+	color: white;
+	padding: 3px 20px;
+	text-decoration: none;
+	border-radius: 0;
+	 cursor: pointer;
+	transition: all 0.35s ease-in-out 0s;
+}
+
+nav ul li a.photonav_link  {
+	transition: all 0.35s ease-in-out 0s;		
+}
+	
+nav ul li a.photonav_link:hover,
+nav ul li a.photonav_link:focus,
+nav ul li a.photonav_link:active {
+	opacity: 0.85;
+}
+
+nav ul li a.photonav_link:hover .photonav_description,
+nav ul li a.photonav_link:focus .photonav_description,
+nav ul li a.photonav_link:active .photonav_description {
+	opacity: 1;
+}	
+
+/*Contact section
+________________________________________________________________*/
+
+#contact_wrapper {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+	height: 350px;
+	overflow: hidden;
+}
+	
+.section_header {
+	margin: 90px 0 15px 0;
+}
+
+div#contact {
+	margin: 70px auto;
+	position: relative;
+}
+	
+div#contact_email {
+	display: inline-block;
+	margin: 20px 60px 40px 0;
+	font-size: 20px;
+}
+	
+div#contact_email a {
+	transition: all 0.5s ease-in-out;
+}
+	
+div#contact_email a:hover,
+div#contact_email a:focus,
+div#contact_email a:active {
+	opacity: .65;
+	text-decoration: underline;
+}
+		
+div.contact_social {
+	display: inline-block;	
+	width: 36px;
+	height: 36px;
+	margin-right: 15px;
+	background-color:#44020a;
+	border-radius: 50%;
+}
+
+/*Footer section
+____________________________________________________________________*/
+	
+#footer {
+	clear: both;
+	width: 100%;
+	height: 60px;
+	background-color: #000;
+	z-index: 55;
+}
+
+#footer div#footer_info {
+	position: relative;
+	padding: 21px 0;
+	color: #FFF;
+	font-size: .9em;
+	font-family: "Josefin Sans", sans;
+	font-style: normal;
+	text-align: center;
+}
+
+#logo_footer_wrapper {
+	width: 2.3em;
+	height: 2.3em;
+	display: inline-block;
+	position: absolute;
+	margin: 10px;
+	z-index: 5;
+}
+		
+#logo_footer {
+	transition: all 0.5s ease-in-out 0s;
+}
+
+#logo_footer:hover,
+#logo_footer:focus,
+#logo_footer:active {
+	transform: scale(1.1);
+}	
+
+/* Shared files of all pages
+__________________________________________________________________________ */
+
+
+/* Font Awesome social media icons */
+
+.fa {
+	color: #fff;
+	padding: 10px;	
+}
+
+.fa {
+	transition: all 0.35s ease-in-out 0s;
+}
+
+.fa:hover, .fa:focus, .fa:active {
+	color: #959595;
+}
+
+/* Divider section */
+
+div.divider_wrapper {
+	width: 100%;
+	height: 35px;
+}
+	
+div.bluestripe {
+	width: 100%;
+	height: 11px;
+	background-color: #003653;
+}
+	
+div.whitestripe_1 {
+	width: 100%;
+	height: 2px;
+	background-color: #FFF;
+}
+	
+div.redstripe {
+	width: 100%;
+	height: 6px;
+	background-color: #44020A;
+}
+	
+div.whitestripe_2 {
+	width: 100%;
+	height: 5px;
+	background-color: #FFF;
+}
+
+div.blackstripe {
+	width: 100%;
+	height: 11px;
+	background-color: #000;
+}
+
+/* Horizontal divider */
+	
+hr.horizontal_divide {
+    text-align: center;
+	width: 75%;
+    margin: 0 auto;
+}
+
+/* Header section of Portfolio and Profile pages */
+
+#top_wrapper_portfolio_profile {
+	margin: 0 auto;
+	width: 100%;
+	height: 205px;
+	position: relative;
+	max-width: 2000px;
+	overflow: hidden;
+}
+
+/* fade image in after load */
+.lazyload,
+.lazyloading {
+    opacity: 0;
+}
+.lazyloaded {
+    opacity: 1;
+    transition: opacity 300ms;
+}
+
+
+/* Media Queries
+_________________________________________________________________*/
+
+@media only screen and (max-width: 1280px) {
+	
+	/* Top wrapper and hero image adjustment */
+	div.top_wrapper {
+		height: 900px;
+	}
+	
+	 #hero_bg {
+  		background: url(../images/bg-alex-hero-1280w.jpg) no-repeat 0 0 fixed;
+		background-size: cover;
+	}
+	
+	/* Signature adjustment */	
+	img#signature {
+		display: block;
+		position: relative;
+		width: 35em;
+		top: 250px;
+		left: 45%;
+	}	
+}
+		
+@media only screen and (max-width: 1050px) {
+  	
+	/* Main nav adjustment */
+	nav ul.main-menu {
+		padding: 0 0 0 6em;
+	}
+	
+	/* Photonav background-size size adjustment */
+ 	#nav_photonav_wrapper 
+	nav#nav_photonav ul li a 
+	div.photonav_photo { 
+		width: 300px; 
+		height: 300px;
+	}
+	
+	/* Signature adjustment */
+	img#signature {
+		display: block;
+		position: relative;
+		width: 33em;
+		top: 250px;
+		left: 45%;
+	} 	
+}
+
+@media only screen and (max-width: 966px) {
+	
+	/* Top wrapper and hero image adjustment */
+	div.top_wrapper {
+		height: 800px;
+	}
+	
+	 #hero_bg {
+  		background: url(../images/bg-alex-hero-966x644.jpg) no-repeat 0 0 fixed;
+		background-size: cover;
+	}
+	
+	/* Header adjustment */	
+ 	#logo_wrapper {
+		width: 7.5em;
+		height: 7.5em;
+		top: 25px;
+	}
+	
+	div#social_media {
+		top: 35px;
+	}
+		
+	/* Main nav adjustment */
+	nav ul.main-menu {
+		padding: 0 0 0 6em;
+	}
+	
+	/* Signature adjustment */
+	img#signature {
+		display: block;
+		position: relative;
+		width: 30em;
+		top: 175px;
+		left: 45%;
+	}
+
+	/* Photonav background-size size and description adjustment */
+ 	#nav_photonav_wrapper
+	nav#nav_photonav ul li a 
+	div.photonav_photo { 
+		width: 275px;
+		height: 275px;
+	}
+	
+	div.photonav_description {
+		margin: 87%  2% 0 2%;
+	}
+}
+
+@media (max-width: 870px){
+	
+	/* Header adjustment */	
+ 	#logo_wrapper {
+		width: 7.25em;
+		height: 7.25em;
+		top: 25px;
+	}
+	
+	div#social_media {
+		top: 35px;
+	}
+	
+	/* Signature adjustment */
+	img#signature {
+		display: block;
+		position: relative;
+		width: 25em;
+		top: 175px;
+		left: 45%;
+	}
+
+	/* Photonav background-size size adjustment */
+ 	#nav_photonav_wrapper 
+	 nav#nav_photonav ul li a  
+ 	div.photonav_photo {
+	 	width: 250px;
+		height: 250px;
+	}
+}
+
+@media (max-width: 800px){
+	
+	/* Top wrapper adjustment on the portfolio and profile pages */
+	#top_wrapper_portfolio_profile {
+	margin: 0 auto;
+	width: 100%;
+	height: 150px;
+	}
+	
+	/* Top wrapper and hero image adjustment */
+	div.top_wrapper {
+		height: auto;
+		width: 100%;
+	}
+	
+	/* Header adjustments */
+	#header_main {
+		height: 130px;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+		
+	#logo_wrapper {
+		width: 6em;
+		height: 6em;
+		left: 20px;
+		top: 15px;
+	}
+		
+	#hero_bg {
+  		background-image: none;
+ 	}
+
+	div#hero-wrap {
+		display: block;
+		max-width: 800px;
+		padding: 0px;	
+	}
+		
+	img#hero-image {
+		display: block;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+		
+	/* Signature svg on index page adjustment */
+	div#main_signature {
+		position: relative;
+		display: block;
+		width: 100%;
+		height: auto;
+		margin: 5px 5px 12px 5px;
+	}
+
+	img#signature {
+		display: block;
+		position: relative;
+		width: 30em;
+		height: 90px;
+		top: 0;
+		left: 0;
+		margin: 0 auto;
+	}
+	
+	/* Signature svg adjustment on portfolio and profile pages */
+	#main_signature_portfolio_profile_bottom {
+		display: none;
+		}
+	
+	#main_signature_portfolio_profile_top {
+		display: inline-block;
+		position: absolute;
+		width: 62%;
+		height: 90px;
+		margin: 0 auto;
+		left: 22%;
+		top: 25px;
+		z-index: 888;
+	}
+	
+	#signature_portfolio_profile_top {
+		opacity: .5;	
+	}
+	
+	/* Removing main navigation */	
+	nav ul.main-menu {
+		display: none;
+	}
+	
+ 	/* Removing the social media buttons */	
+	div#social_media {
+		display: none;
+	}
+
+	/* Mobile menu addition */	
+	nav#nav-mobile {
+		display: inline-block;
+		position: absolute;
+		text-align: center;
+		right: 20px;
+		top: 40px;
+		z-index: 888;
+	}
+	
+	nav#nav-mobile a#menu-toggle.anchor-link {
+		color: #fff;
+		text-align: center;
+		display: inline-block;
+		width: 36px;
+		height: 36px;
+		margin: 2px;
+		background-color:#44020a;
+		border-radius: 50%;
+	}
+	
+	nav#nav-mobile a#menu-toggle.anchor-link i.fa.fa-bars {
+		/*padding: 9px;*/
+		}
+		
+	div#mobile-nav-wrapper {
+		display: block;
+		margin: 0 auto;
+		padding: 60px 50px;
+		font-size: 1.2em; 
+		text-align:center;
+		background-color: #FFF;
+		color: #5D5C5C;
+	}
+	
+	nav#menu-mobile ul li {
+		border: 1px solid #FFF;
+		color: #FFF;
+		margin: 5px;	
+	}
+	
+	nav#menu-mobile ul li a {
+		display:block;
+		text-align: center;
+		font-family: "Josefin Sans", sans;
+		color: #FFF;
+		background: #000;
+		opacity: 0.5;
+		text-decoration: none;
+		padding: .8em .95em;
+		transition: all linear 0.35s; 
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
+	
+	nav#menu-mobile ul li a:hover,
+	nav#menu-mobile ul li a:focus,
+	nav#menu-mobile ul li a:active {
+		background: #FFF;
+		color: #5D5C5C;
+		text-decoration: underline;
+		transition: all linear 0.35s;
+	}
+	
+	div#mobile-divider {
+		display: block;
+		z-index: 5;
+	}	
+	
+	/* Blockquote adjustment */
+	div#lower_wrapper blockquote#quote h1 {
+		font-size: 2.5em;
+	}
+		
+	div#lower_wrapper blockquote#quote h1::before { 
+		font-size: 1.5em;
+		left: -15px;
+		top: 8px;
+	}
+	
+	div#lower_wrapper blockquote#quote h1::after {
+		left: 8px;
+		top: -10px;
+		font-size:.75em;
+	}
+	
+	/* Photonav background-size size */	
+ 	#nav_photonav_wrapper
+	nav#nav_photonav ul li a  
+ 	div.photonav_photo {
+		width: 225px;
+		height: 225px;
+	}
+}
+
+@media (max-width: 740px){ 
+		
+	/* Signature svg adjustment */
+	img#signature {
+		width: 27em;
+	}
+
+	/* Blockquote adjustment */
+	div#lower_wrapper blockquote#quote h1{
+		font-size: 2.8em
+	}
+	
+	/* Photonav background-size size and description adjustment */
+ 	#nav_photonav_wrapper
+ 	nav#nav_photonav ul li a
+ 	div.photonav_photo {
+		width: 200px; 
+		height: 200px;
+	}
+ 
+	div.photonav_description {
+		margin: 86%  2% 0 2%;
+	}	
+}
+
+@media (max-width: 650px) {
+
+	/* Header adjustment */
+	#top_wrapper_portfolio_profile {
+		height: 120px;
+	}
+	
+	#logo_wrapper {
+		width: 5.5em;
+		height: 5.5em;
+	}
+
+	/* Signature svg adjustment */
+	img#signature {
+		width: 25em;
+	}
+			
+	/* Signature svg adjustment on portfolio and profile pages */
+	#main_signature_portfolio_profile_top {
+		height: 70px;
+	}
+	
+ 	/* Photonav background-size adjustment */
+  	#nav_photonav_wrapper
+  	nav#nav_photonav ul li a  
+  	div.photonav_photo {
+	 	width: 350px; 
+		height: 350px; 
+		margin-bottom: 15px;
+	}
+	
+	div.photonav_description {
+		margin: 90%  2% 0 2%;
+	}
+}
+
+
+@media (max-width: 600px) {
+
+	/* Signature svg index page adjustment */
+	img#signature {
+		width: 24em;
+	}
+	
+	#main_signature_portfolio_profile_top {
+		left: 22.5%;
+		top: 32px;
+	}
+	
+	/* Blockquote adjustment */
+	div#lower_wrapper blockquote#quote h1 {
+		font-size: 2.5em;
+	}
+		
+	div#lower_wrapper blockquote#quote h1::before { 
+		font-size: 1.5em;
+		left: -15px;
+		top: 8px;
+	}
+	
+	div#lower_wrapper blockquote#quote h1::after {
+		left: 8px;
+		top: -10px;
+		font-size:.75em;
+	}
+}
+
+
+@media (max-width: 550px) {
+		
+	/* Header adjustments */
+	img#hero-image {
+		display: none;	
+	}
+
+	#hero-image-550w {
+		display: block;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	#logo_wrapper {
+		width: 4.8em;
+		height: 4.8em;
+		top:18px;
+	}
+	
+	/* Signature svg adjustment */
+	img#signature {
+		width: 23em;
+	}
+	
+	/* Signature svg on portfolio and profile page adjustment */
+	#main_signature_portfolio_profile_top {
+		left: 22.5%;
+		top: 32px;
+	}
+
+	/* Blockquote adjustment */
+	div#lower_wrapper blockquote#quote h1 {
+		font-size: 2em;
+	}
+	
+	div#lower_wrapper blockquote#quote h1::before { 
+		font-size: 1.6em;
+		left: -13px;
+		top: 4px;
+	}
+	
+	div#lower_wrapper blockquote#quote h1::after {
+		left: 7px;
+		top: -10px;
+		font-size:.7em;
+	}	
+}
+	
+@media (max-width: 500px) {
+
+	/* Header adjustments */	
+	img#hero-image {
+		display: none;	
+	}
+
+	#hero-image-550w {
+		display: block;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	#logo_wrapper {
+		left: 20px;
+	}
+	
+	nav#nav-mobile {
+		right: 20px;
+	}
+		
+	/* Signature svg adjustment */
+	img#signature {
+		width: 22em;
+	}
+}
+	
+@media (max-width: 450px ){
+	
+	#logo_wrapper {
+		left: 10px;
+	}
+	
+	nav#nav-mobile {
+		right: 7px;
+	}
+			
+	/* Signature svg adjustment */
+	img#signature {
+		width: 18em;
+		height: 60px;
+	}
+	
+	/* Signature svg on portfolio and profile page adjustment */
+	#main_signature_portfolio_profile_top {
+		left: 23.5%;
+		top: 35px;
+	}
+	
+	/* Blockquote adjustment */
+	div#lower_wrapper blockquote#quote h1 {
+		font-size: 1.9em;
+	}
+	
+	div#lower_wrapper blockquote#quote h1::before { 
+		font-size: 1.4em;
+		left: -4px;
+		top: 4px;
+	}
+	
+	div#lower_wrapper blockquote#quote h1::after {
+		left: 4px;
+		top: -5px;
+		font-size:.7em;
+	}
+	
+	 /* Photonav background-size adjustment */
+  	#nav_photonav_wrapper
+  	nav#nav_photonav ul li a  
+  	div.photonav_photo {
+	 	width: 325px; 
+		height: 325px; 
+		margin-bottom: 15px;
+	}
+	
+	/* Contact sections adjustments */
+	div#contact_email {
+		display: block;
+		margin: 25px 0  35px 0;
+		font-size: 20px;
+	}
+	div.contact_social {
+		margin: 0 7px;
+		}		
+} 
+
+@media (max-width: 415px ){
+	
+	/* Header adjustments */	
+	img#hero-image-550w {
+		display: none;	
+	}
+
+	#hero-image-415w {
+		display: block;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	/* Signature svg adjustment */
+	img#signature {
+		width: 17em;
+	}
+		
+	/* Signature svg on portfolio and profile page adjustment */
+	#main_signature_portfolio_profile_top {
+		left: 23.5%;
+	}
+	
+		
+	/* Blockquote adjustment */
+	div#lower_wrapper blockquote#quote h1 {
+		font-size: 1.8em;
+	}
+	
+	#footer div#footer_info {
+		font-size: .8em;
+	}	
+} 
+
+@media (max-width: 375px ){
+
+	/* Header adjustment */
+	#top_wrapper_portfolio_profile {
+		height: 90px;
+	}
+	
+	#logo_wrapper {
+		top: 15px;
+		width: 55px;
+		height: 55px;
+	}
+	
+	nav#nav-mobile {
+		top: 25px;
+	}
+	
+	/* Signature svg adjustment */
+	img#signature {
+		width: 16em;
+	}
+				
+	/* Signature svg on portfolio and profile page adjustment */
+	#main_signature_portfolio_profile_top {
+		left: 22%;
+		top: 25px;
+		height: 45px;
+	}
+		
+	/* Blockquote adjustment */
+	div#lower_wrapper blockquote#quote h1 {
+		font-size: 1.55em;
+	}
+	
+	/* Blockquote adjustment */
+	div#lower_wrapper blockquote#quote h1::before { 
+		font-size: 1.2em;
+		left: -3px;
+		top: 2px;
+	}
+	
+	div#lower_wrapper blockquote#quote h1::after {
+		left: 2px;
+		top: -5px;
+		font-size:.6em;
+	}
+	
+	/* Photonav background-size adjustment */
+  	#nav_photonav_wrapper
+  	nav#nav_photonav ul li a  
+  	div.photonav_photo {
+	 	width: 300px; 
+		height: 300px; 
+		margin-bottom: 15px;
+	}
+	
+	/* Footer adjustment */
+	#footer div#footer_info {
+		text-align: right;
+		padding-right: 28px;
+	}
+}
+	
+@media (max-width: 325px ){
+	
+	#logo_wrapper {
+		top: 12px;
+		width: 52px;
+		height: 52px;
+		left: 10px;
+	}
+	
+	nav#nav-mobile {
+		top: 17px;
+		right:10px;
+	}
+	
+	/* Signature svg adjustment */
+	img#signature {
+		width: 15em;
+	}
+	
+	/* Signature svg on portfolio and profile page adjustment */
+	#main_signature_portfolio_profile_top {
+		width: 57%;
+		height: 35px;
+		left: 24%;
+	}
+	 
+  	#nav_photonav_wrapper
+  	nav#nav_photonav ul li a  
+ 	div.photonav_photo {
+	 	width: 275px;
+	 	height: 275px;
+	 }	
+		
+	/* Blockquote adjustment */
+	div#lower_wrapper blockquote#quote h1 {
+		font-size: 1.5em;
+	}
+
+	div#lower_wrapper blockquote#quote h1::before { 
+		font-size: 1.2em;
+		left: -2px;
+		top: 1px;
+	}
+	
+	div#lower_wrapper blockquote#quote h1::after {
+		left: 1px;
+		top: -3px;
+		font-size: .6em;
+	}
+
+	/* Contact email adjustment and footer */	
+	#footer div#footer_info {
+		font-size: .75em;
+		text-align: right;
+		padding-right: 10px;
+	}	
+}

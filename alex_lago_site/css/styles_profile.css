@@ -1,0 +1,817 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*Profile.html*/
+	
+/* Table of Contents
+––––––––––––––––––––––––––––––––––––––––––––––
+- Bio Section
+- Experience Section
+- Stats Section
+- Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––– */	
+	
+
+/*Bio Section 
+__________________________________________________________________________*/
+
+div#top-container {
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	max-width: 1280px;
+	margin: 0 auto;
+	height: auto;
+}
+	
+div.bio_wrapper {
+	width: auto;
+	height: 640px;
+	position: relative;
+	text-align: center;
+	margin: 5%;
+}	
+	
+ div.bio_wrapper#bio_photo {
+	background: url(../images/bg-alex-lago-model-sitting-by-fountain-3_5-960w.jpg) no-repeat center;
+	background-size: auto 100%;
+}	
+
+div#bio_text_wrapper {
+	position: absolute;
+	display: inline-block;
+	left: 55%;
+	float: right;
+	top: 80px;
+	height: auto;
+	width: 21em;
+	background-color: #44020A;
+	opacity: 0.875;
+	padding: .65em;
+	z-index: 5;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  	transition: all linear 0.5s;
+}
+
+div#bio_text_wrapper:hover,
+div#bio_text_wrapper:focus, 
+div#bio_text_wrapper:active {
+	opacity: 1;
+	transform: scale(1.1);
+}
+	
+div#bio_text {
+	font-family: "Minion Pro", "Garamond", serif;
+	color: #FFF;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1.1em;
+	word-wrap: normal;
+	text-align:left;
+	padding-top: 3px;
+}
+	
+p#bio_signature {
+	font-size: 1.75em;
+	font-family: "Magneto", "Minion Pro", "Garamond", serif;
+}
+	
+	
+/*Experience Section
+__________________________________________________________________________________*/		
+div#experience_wrapper {
+	clear: right;
+	width: 100%;
+	overflow: hidden;
+	margin: 0 auto;
+	text-align: center;
+	font-family: "Josefin Sans", sans;
+	font-weight: bold;
+	color: #5D5C5C;
+}
+	
+div#content_wrapper{
+	width: 680px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+	
+div.content_header {
+	margin-top: 20px;
+	background-color: #44020A;
+	height: 30px;
+	width: 100%;
+	color: #FFF;
+	padding-top: 8px;
+	font-size: 1.2em;
+	text-indent: 20px;
+	text-align: left;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	transition: all ease-in-out .3s;
+}
+	
+div.content_header:hover, 
+div.content_header:focus, 
+div.content_header:active  {
+	opacity: .95;
+	background-color: #000;
+}
+	
+div.experience_content {
+	text-align: left;
+	margin: 12px 0 5px 18px;
+	padding: 5px 0 5px 0;
+	transition: all ease-in-out .3s;
+}
+	
+div.experience_content:hover, 
+div.experience_content:focus, 
+div.experience_content:active {
+	background-color: #e2e2e2;
+	opacity: 0.95;
+	color: #000;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+div.experience_content p {
+	padding-left: 10px;
+	padding-top: 2px;
+}
+	
+p.content_title {
+	font-size: 1.3em;
+}	
+
+p span.content_title {
+	font-size: 1.3em;
+}
+	
+p span.content_info {
+	font-size: 1em;
+}
+	
+p span.content_info::before {
+	content: " \2014";
+}
+	
+ p.content_role {
+	font-size: .875em;
+}
+		
+div#experience-photo {
+  	position:relative;
+  	height: 300px;
+ 	width: 300px;
+  	float: right;
+	z-index: 3;
+	top: -75px;
+}
+
+/* Experience section photo - one on top of each other with hover reveal */
+div#experience-photo img {
+  	position: absolute;
+	width: 100%;
+	height: auto;
+  	left: 0;
+  	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  	transition: opacity .35s ease-in-out;
+}
+
+div#experience-photo img.top:hover, 
+div#experience-photo img.top:focus, 
+div#experience-photo img.top:active {
+  	opacity:0;
+}
+
+div#experience-photo::after {
+	clear: both;
+}
+			
+/*Stats Section
+______________________________________________________________________*/
+div#stats_section {
+	position: relative;
+	margin: 20px auto;
+	width: 680px;
+	text-align: left;
+}
+	
+div#stats_col_1 { 
+	position: relative;
+	display: inline-block;
+	width: 120px;
+	margin: 0 auto;
+	padding: 30px 20px 30px 100px;  
+}
+		
+div#stats_col_2 { 
+	display: inline-block;
+	width: 120px;
+	margin: 0 auto;
+	padding: 30px 20px 30px 40px; 
+}
+	
+dl { 
+	line-height: 2.2em;
+}
+
+dt { 
+	font-size: 1.2em; 
+	display: inline;
+}
+
+dt:after { 
+	content: ": ";
+}
+	
+dd { 
+	font-style: italic; 
+	display: inline; 
+	padding-left: 4px;
+}
+
+/* Quote */
+div#stats_quote_wrapper {
+	display: inline-block;
+	position: relative;
+	height: 180px;
+	width: 180px;
+	border-radius: 50%;
+	background-color: #44020A;
+	color: #FFF;
+	text-align: center;
+	left: 20px;
+	overflow: hidden;
+	top: 100px;
+	z-index: 1;
+	font-family: "Minion Pro", "Garamond", serif;
+	font-style: normal;
+	font-size: .975em ;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  	transition: opacity .5s ease-in-out;
+}
+	
+div#stats_quote_wrapper:hover, 
+div#stats_quote_wrapper:focus, 
+div#stats_quote_wrapper:active {
+	opacity: .95;
+	background-image: url(../images/AlexLago_Rock-708.jpg);
+	text-shadow: 1px 1px #222;
+}	
+	
+div#quote_text {
+	padding-top: 38px;
+}
+	
+p#quote_rule {
+	font-size: 1.7em;
+	font-family: "Josefin Sans", "Myriad Pro", sans;
+	font-style: italic;
+	text-decoration: underline;
+	padding-bottom: 8px;
+}	
+
+p.rule {
+	line-height: 1.4em;
+}
+
+div#stats_quote_wrapper::after {
+	clear: both;
+}
+
+/* Media Queries
+__________________________________________________________________________*/
+
+@media (max-width: 966px){
+	
+	/* Bio-wrapper adjustment */
+	div.bio_wrapper {
+	height: 550px;
+	}	
+		
+	/* Bio text-wrapper adjustment*/
+	div#bio_text_wrapper {
+		left: 50%;
+		top: 40px;
+		width: 22em;
+	}
+}
+
+@media (max-width: 800px){
+			
+	/* Bio text-wrapper and text adjustment*/	
+	div#bio_text_wrapper {
+		top: 70px;
+		width: 20em;
+	}
+
+	div#bio_text {
+		font-size: 1em;
+	}
+	
+	/* Experience photo adjustment */
+	div#experience-photo {
+		height:300px;
+		width:300px;
+		top: -75px;
+		left: -20px
+	}
+	
+	/* Quote wrapper adjustment for mobile */
+	div#stats_quote_wrapper {
+		top: 35px;
+	}
+
+}
+
+@media (max-width: 740px){
+	
+	/* Bio-wrapper adjustment*/	
+	div.bio_wrapper {
+		height: 500px;
+		margin: 3%;
+	}
+	
+	/* Bio text-wrapper adjustment*/	
+	div#bio_text_wrapper {
+		top: 40px;
+		width: 19.5em;
+		padding: .55em;
+	}
+}
+
+@media (max-width: 700px){
+	
+	/* Bio text-wrapper adjustment*/	
+	div#bio_text_wrapper {
+		top: 40px;
+		width: 18.5em;
+		padding: .55em;
+		left: 48%;
+	}
+
+	/* Experience section adjustment*/	
+	div.content_header {
+		padding-left: 10px;
+	}		
+
+	div#content_wrapper{
+		width: 100%;
+		margin: 0 auto;
+		overflow: hidden;	
+	}
+	
+	div#content_wrapper p {
+		padding-left: 15px;
+	}
+	
+	/* Experience-photo adjustment*/	
+	div#experience-photo {
+		height:300px;
+		width:300px;
+		top: -75px;
+		left: -25px
+	}
+	
+	/* Quote section adjustment */
+	div#stats_quote_wrapper {
+		left: 5px;
+	}	
+}
+
+@media (max-width: 650px){
+	
+	/* Bio text-wrapper adjustment*/	
+	div#bio_text_wrapper {
+		top: 10px;
+		width: 17em;
+		padding: .45em;
+	}
+	
+	/* Experience-photo adjustment*/		
+	div#experience-photo {
+		height: 250px;
+		width: 250px;
+		top: -35px;
+		left: -45px
+	}
+		
+	/* Quote section adjustment */
+	div#stats_quote_wrapper {
+		left: -25px;
+	}	
+	
+}
+
+@media (max-width: 600px) {
+	
+	/* Bio-wrapper  and photo adjustment*/	
+	div.bio_wrapper {
+		height: 550px;
+		margin: 2.5%; 
+	}
+	
+	 div.bio_wrapper#bio_photo{
+		background: url(../images/bg-alex-lago-profile-500w.jpg) no-repeat 0 0;
+		background-size: auto 100%;
+	}
+	
+	/* Bio text-wrapper adjustment*/	
+	div#bio_text_wrapper {
+		top: 40px;
+		width: 16em;
+		left: 48%;
+		padding: .55em .5em .95em .5em;
+	}
+
+	div#bio_text {
+		font-size: .95em;
+	}
+	
+	/* Experience section adjustment*/
+	p.content_title {
+		font-size: 1.1em;
+	}	
+	
+ 	p span.content_title {
+		font-size: 1.1em;
+	}
+	
+	p span.content_info {
+		font-size: .9em;
+	}
+	
+	div#stats_section {
+		width: 550px;	
+	}
+	
+	div#stats_col_1 { 
+		padding: 30px 20px 30px 40px;  
+	}
+		
+	div#stats_col_2 { 
+		padding: 30px 20px 30px 20px; 
+	}	
+}
+
+@media (max-width: 550px) {
+	
+	div#content_wrapper{
+		width: 100%;
+		margin: 0 auto;
+		overflow: hidden;	
+	}	
+	
+	/* Bio text-wrapper adjustment*/	
+	div#bio_text_wrapper {
+		left: 47%;
+		width: 15em;
+	}	
+		
+	div.content_header {
+		padding-left: 10px;
+	}
+	
+	div#content_wrapper p {
+		padding-left: 15px;	
+	}
+		
+	p span.content_info {
+	display: block;
+	}
+	
+	p span.content_info::before {
+		display: none;
+	}
+}
+
+@media (max-width: 525px) {
+	
+	/* Bio text-wrapper adjustment*/	
+	div#bio_text_wrapper {
+		margin: 0 auto;
+		left: 49.5%;
+		width: 220px;
+		top: 25px;
+	}
+	
+	p span.content_info {
+		font-size: .8em;
+	}
+	
+ 	p.content_role {
+		font-size: .85em;
+	}
+	
+	dl dt {
+		font-size: 1.1em; 
+	}
+	
+	div#stats_col_1 { 
+		padding: 30px 20px 30px 40px;  
+	}
+		
+	div#stats_col_2 { 
+		padding: 30px 10px 30px 0px; 
+	}
+}
+
+@media (max-width: 500px) {
+	
+	/* Bio-wrapper adjustment*/	
+	div.bio_wrapper {
+		height: 525px;
+		margin: 2.5%;
+	}
+	
+	 div.bio_wrapper#bio_photo{
+		background: url(../images/bg-alex-lago-profile-500w.jpg) no-repeat center;
+		background-size: auto 100%;
+	}
+	
+	/* Bio text-wrapper adjustment*/	
+	div#bio_text_wrapper {
+		margin: 0 auto;
+		left: 0%;
+		width: auto;
+		top: 25px;
+		font-size: 1.2em;
+		opacity: .65;
+	}
+	
+	/* Bio text-wrapper:hover adjustment*/	
+	div#bio_text_wrapper:hover,
+	div#bio_text_wrapper:focus, 
+	div#bio_text_wrapper:active {
+		transform: none;
+	}
+	
+	/* Experience section adjustment*/
+		
+ 	p.content_role {
+		font-size: .85em;
+	}
+	
+	/* Experience-photo adjustment*/		
+	div#experience-photo {
+		height: 225px;
+		width: 225px;
+		top: -75px;
+		left: -45px
+	}
+	
+	/* Quote section adjustment */
+	div#stats_quote_wrapper {
+		width: 160px;
+		height: 160px;
+		font-size: .92em;
+		left: -20px;
+		top: 20px;
+		padding: 0;	
+	}		
+	
+	div#quote_text {
+		padding-top: 30px;
+	}	
+}
+
+@media (max-width: 485px ) {
+		
+	div#stats_col_1 { 
+		padding: 30px 5px 30px 35px;  
+	}
+}
+
+@media (max-width: 475px) {	
+		
+	/* Bio text-wrapper adjustment*/	
+	div#bio_text_wrapper {
+		left: 0%;
+		width: auto;
+	}
+	
+	/* Experience-photo adjustment*/		
+	div#experience-photo {
+		height: 225px;
+		width: 225px;
+		top: -75px;
+		left: -35px
+	}
+}
+
+@media (max-width: 450px) {
+	
+	/* Bio text-wrapper adjustment*/	
+	div#bio_text_wrapper {
+		left: 0%;
+		width: auto;
+		top: 20px;
+		font-size: 1.2em;
+	}	
+	
+	/* Stats section adjustment*/
+		
+	div#stats_section {
+		width: 100%;
+		margin: 0 auto;	
+	}
+
+	div#stats_col_1 { 
+		margin: 0 auto;
+		padding: 30px 20px 0 100px;  
+	}
+	
+	div#stats_col_2 {
+		margin: 0 auto; 
+		padding: 30px 10px 0 0; 
+	}
+	
+	/* Quote adjustment */
+	div#stats_quote_wrapper {
+		display: block;
+		width: 170px;
+		height: 170px;
+		font-size: 1em;
+		margin: 20px auto;
+		left: 0;	
+		top: 0;	
+	}	
+}
+
+@media (max-width: 425px) {
+	
+	/* Bio text-wrapper adjustment*/	
+	div#bio_text_wrapper {
+		left: 0%;
+		width: auto;
+		top: 20px;
+		font-size: 1.2em;
+	}
+	
+	/* Stats adjustment */
+	div#stats_col_1 { 
+		padding: 30px 20px 0 85px;  
+	}
+	
+	/* Experience-photo adjustment*/		
+	div#experience-photo {
+		height: 200px;
+		width: 200px;
+		top: -75px;
+		left: -25px
+	}	
+}
+
+@media (max-width: 415px) {
+	
+	/* Bio text-wrapper adjustment*/	
+	div#bio_text_wrapper {
+		width: auto;
+		top: 20px;
+		font-size: 1.2em;
+	}	
+}
+
+@media (max-width: 400px) {
+	
+	/* Bio text-wrapper adjustment*/	
+	div#bio_text_wrapper {
+		width: auto;
+		top: 20px;
+		font-size: 1.2em;
+	}
+	
+	/* Stats adjustment */	
+	div#stats_col_1 { 
+		padding: 30px 20px 0 75px;  
+	}
+		
+	/* Experience-photo adjustment*/		
+	div#experience-photo {
+		height: 175px;
+		width: 175px;
+		top: -75px;
+		left: -15px
+	}
+}
+
+@media (max-width: 375px) {
+		
+	/* Bio-wrapper adjustment*/	
+	div.bio_wrapper {
+		height: 550px;
+		margin: 2.5%;
+	}
+		
+	/* Bio text-wrapper adjustment*/	
+	div#bio_text_wrapper {
+		width: auto;
+		top: 35px;
+		font-size: 1.1em;
+	}
+	
+	/* Experience section adjustments */
+	div.content_header {
+		padding-left: 0px;
+	}
+	
+	div#content_wrapper p {
+		padding-left: 5px;	
+	}		
+	
+	/* Stat section adjustment */
+	div#stats_col_1 { 
+		padding: 30px 20px 0 63px;  
+	}
+}
+
+@media (max-width: 360px) {
+	
+	/* Bio text-wrapper adjustment*/	
+	div#bio_text_wrapper {
+		width: auto;
+		top: 34px;
+		font-size: 1.1em;
+	}
+	
+	/* Experience-photo adjustment*/		
+	div#experience-photo {
+		position:relative;
+		height: 150px;
+		width: 150px;
+		top: -75px;
+		left: -10px
+	}
+	
+	/* Stat section adjustment */
+	div#stats_col_1 { 
+		padding: 30px 20px 0 58px;  
+	}
+	
+}
+
+
+@media (max-width: 350px) {
+	
+	/* Bio text-wrapper adjustment*/	
+	div#bio_text_wrapper {
+		width: auto;
+		top: 20px;
+		font-size: 1.1em;
+	}
+	
+	/* Experience section adjustments */
+	
+	div#content_wrapper p {
+		padding-left: 0px;	
+	}
+	
+	/* Stat section adjustment */
+	div#stats_col_1 { 
+		padding: 30px 15px 0 55px;  
+	}	
+}
+
+@media (max-width: 325px) {
+	
+	/* Bio text-wrapper adjustment*/	
+	div#bio_text_wrapper {
+		width: auto;
+		top: 40px;
+		font-size: 1.07em;
+	}
+	
+	/* Experience-photo adjustment*/		
+	div#experience-photo {
+		height: 140px;
+		width: 140px;
+		top: -75px;
+		left: -18px
+	}
+	
+	/* Stat section adjustment */
+	div#stats_col_1 { 
+		padding: 30px 7px 0 42px;  
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
